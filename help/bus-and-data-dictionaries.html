@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1 id="bus-data-dictionaries">Bus &amp; Data Dictionaries</h1>
+        <h2 id="create-bus-object">Generate Bus Object for Bus
+        Creators</h2>
+        <figure>
+        <img src="img/createBusObj.png"
+        alt="Button: Generate bus object" />
+        <figcaption aria-hidden="true">Button: Generate bus
+        object</figcaption>
+        </figure>
+        <p>This function creates bus objects (<a
+        href="https://www.mathworks.com/help/simulink/slref/simulink.bus.html">Simulink.Bus</a>)
+        for selected Bus Creator blocks. Output lines of the selected
+        Bus Creator blocks must have line names, which will be used as
+        the bus object names.</p>
+        <p>After clicking the button, a dialog will appear:</p>
+        <figure>
+        <img src="img/createBusGUI.png" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h3 id="bus-generation-methods">Bus Generation Methods</h3>
+        <ul>
+        <li><p><strong>By checking resolved signals:</strong><br />
+        The software checks the signal name of each input to the Bus
+        Creator block. If all signals are defined, the bus object is
+        created using the defined signal properties. If any signal is
+        not defined, the bus object will not be created.</p></li>
+        <li><p><strong>By compiling the model:</strong><br />
+        The software compiles the model to create bus objects.
+        Reference: <a
+        href="https://www.mathworks.com/help/simulink/slref/simulink.bus.createobject.html">Simulink.Bus.createObject</a>.</p></li>
+        </ul>
+        <h3 id="code-generation-options">Code Generation Options</h3>
+        <p>Here, you can set various bus object properties.</p>
+        <h3 id="select-data-source">Select Data Source</h3>
+        <p>You can choose where to save the newly generated bus objects.
+        If the model is linked to a data dictionary, you can select the
+        main or any referenced data dictionary. If the model has access
+        to the base workspace, you can also select the base
+        workspace.</p>
+        <h3 id="examples">Examples</h3>
+        <p>Generate bus objects by compiling the model:</p>
+        <figure>
+        <img src="img/bus_createBusObject_compile.gif"
+        alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <p>Generate bus objects by checking resolved signals:</p>
+        <figure>
+        <img src="img/bus_createBusObject_resolved.gif"
+        alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h2 id="link-bus-signals">Link Bus Signals</h2>
+        <figure>
+        <img src="img/linkBus.png" alt="Button: Link bus signals" />
+        <figcaption aria-hidden="true">Button: Link bus
+        signals</figcaption>
+        </figure>
+        <p>This function connects a Bus Selector’s named bus signals to
+        the matching input ports of one or more selected downstream
+        Subsystem or Model Reference blocks.</p>
+        <p><strong>How to use:</strong> Select <strong>one</strong> Bus
+        Selector and one or more Subsystem or Model Reference blocks,
+        then click the button. The tool traces the Bus Selector upstream
+        until it finds a Bus Creator or a resolved Simulink.Bus object,
+        retrieves the bus’s element names, and routes each named element
+        line to the same-named input port on every selected downstream
+        block.</p>
+        <p><strong>Requirements:</strong></p>
+        <ul>
+        <li>Exactly one Bus Selector must be in the selection.</li>
+        <li>The Bus Selector’s outport must be unconnected.</li>
+        <li>The bus must be resolvable upstream — either via a Bus
+        Creator whose inputs are named, or via a
+        <code>Simulink.Bus</code> object attached to the bus line.</li>
+        </ul>
+        <h3 id="example">Example</h3>
+        <figure>
+        <img src="img/linkBus.gif" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h2 id="data-dictionary">Data Dictionary Functions</h2>
+        <figure>
+        <img src="img/ddMenu.png" alt="Button: Open data dictionary" />
+        <figcaption aria-hidden="true">Button: Open data
+        dictionary</figcaption>
+        </figure>
+        <p>This button opens a menu for data dictionary functions. It is
+        available for MATLAB R2016a and later versions.</p>
+        <p>Currently, it provides two functions:</p>
+        <ul>
+        <li>Save all data dictionary changes</li>
+        <li>Discard all data dictionary changes</li>
+        </ul>
+        <p>These options are only available when there are unsaved
+        changes in any of the open data dictionaries</p>
+    </main>
+</body>
+</html>

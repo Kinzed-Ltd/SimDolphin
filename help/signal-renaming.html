@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1 id="tool-panel---signal-renaming">Tool Panel - Signal
+        Renaming</h1>
+        <h2 id="signal-renaming">Signal Renaming</h2>
+        <p>The buttons in this group push or propagate signal names
+        through the model, keeping signal names consistent between
+        connected blocks.</p>
+        <h3 id="update-signal-names-through-signal-routes">Update Signal
+        Names Through Signal Routes</h3>
+        <p><img src="img/pushNameDwn.png" class="inline"
+        alt="Button: Push signal name to downstream" /> <img
+        src="img/pushNameUp.png" class="inline"
+        alt="Button: Push outport signal name to upstream" /></p>
+        <h4 id="signal-name-obtainment">Signal Name Obtainment</h4>
+        <p>This function get the signal name of the selected objects,
+        and pushes the signal name downstream or upstream. The following
+        objects are valid for selection in downstream pushing:</p>
+        <ul>
+        <li>Lines: Signal names are obtained from upstream.</li>
+        <li>In/Out blocks: Signal names are obtained from block
+        names.</li>
+        <li>Goto/From blocks: Signal names are obtained from
+        GotoTags.</li>
+        </ul>
+        <p>For upstream pushing, only Out blocks are valid for
+        selection, and signal names are obtained from block names.</p>
+        <h4 id="signal-tracking-logic">Signal Tracking Logic</h4>
+        <p>This function tracks the signal route until untrackable. It
+        goes through lines, Inport/Outport blocks, Goto/From blocks, and
+        Bus Creators/Selector blocks. The tracking only stops when other
+        blocks are detected. For downstream, when a signal goes into
+        different blocks, all different routes will be tracked.</p>
+        <h4 id="model-update">Model Update</h4>
+        <p>It updates the following parameter values if they are
+        inconsistent with the signal name obtained:</p>
+        <ul>
+        <li>Line names</li>
+        <li>Block names of Inport/Outport blocks</li>
+        <li>GotoTags of Goto/From blocks</li>
+        <li>When tracking downstream, if the signal goes into a bus
+        creator, all bus selectors will be updated if this signal is
+        selected.</li>
+        <li>When tracking upstream, if the signal goes into a bus
+        selector, the name of the signal goes into the bus creator will
+        also be updated.</li>
+        <li>If a bus object is defined for the bus containing this
+        signal, the bus object will be updated as well.</li>
+        </ul>
+        <p>When the signal goes into other library blocks or model
+        references, and if updates are needed for those files, a warning
+        dialog will pop up and the user can choose files to update.</p>
+        <h4
+        id="file-selection-on-library-blocks-and-model-references">File
+        Selection on Library Blocks and Model References</h4>
+        <p>When the signal goes into other library blocks or model
+        references, and if updates are needed for those files, a warning
+        dialog will pop up and the user can choose files to update. The
+        dialog lists all affected files, and the user can select which
+        files to update.</p>
+        <h4 id="examples">Examples:</h4>
+        <p>Push downstream and push upstream:</p>
+        <figure>
+        <img src="img/pushSig.gif" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h3 id="update-gototags-from-upstream">Update GotoTags from
+        Upstream</h3>
+        <figure>
+        <img src="img/gfTagDwn.png" class="inline"
+        alt="Button: Update GotoTag from Goto to From" />
+        <figcaption aria-hidden="true">Button: Update GotoTag from Goto
+        to From</figcaption>
+        </figure>
+        <figure>
+        <img src="img/gfTagUp.png" class="inline"
+        alt="Button: Update GotoTag from From to Goto" />
+        <figcaption aria-hidden="true">Button: Update GotoTag from From
+        to Goto</figcaption>
+        </figure>
+        <p>This function updates Goto block tag names to match the
+        signal name of the connected signal.</p>
+        <figure>
+        <img src="img/writeGotoTag.gif" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h3 id="update-inout-block-names">Update In/Out Block Names</h3>
+        <figure>
+        <img src="img/ioWriteName.png"
+        alt="Button: Update In/Out block names" />
+        <figcaption aria-hidden="true">Button: Update In/Out block
+        names</figcaption>
+        </figure>
+        <p>This function updates the names of In and Out blocks to match
+        the signal names of the selected blocks.</p>
+        <p>For In blocks, it traces upstream; for Out blocks, it traces
+        downstream. The function attempts to retrieve signal names from
+        the signal lines. If no signal names are found, it will use the
+        names of other In/Out blocks or the tags of Goto/From
+        blocks.</p>
+        <figure>
+        <img src="img/sigPrt_ioWriteNames.gif"
+        alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h3 id="write-subsystem-port-names">Write SubSystem Port
+        Names</h3>
+        <figure>
+        <img src="img/ssWritePorts.png"
+        alt="Button: Write SubSystem In/Out names" />
+        <figcaption aria-hidden="true">Button: Write SubSystem In/Out
+        names</figcaption>
+        </figure>
+        <p>This function updates the names of all In/Out blocks within a
+        Subsystem to match the signal names of the selected
+        Subsystems.</p>
+        <figure>
+        <img src="img/sigPrt_writePortName.gif"
+        alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+    </main>
+</body>
+</html>

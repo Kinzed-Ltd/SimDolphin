@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1 id="tool-panel---information-block-format">Tool Panel -
+        Information &amp; Block format</h1>
+        <h2 id="copy-value">Copy Characteristic Value</h2>
+        <figure>
+        <img src="img/chaCopy.png"
+        alt="Button: Copy characteristic value" />
+        <figcaption aria-hidden="true">Button: Copy characteristic
+        value</figcaption>
+        </figure>
+        <p>This button copies the “characteristic value”, which is the
+        key property value of a block, to the clipboard. For a line, the
+        “characteristic value” is the signal name. For a block, the
+        “characteristic value” is defined as shown in the table
+        below:</p>
+        <table>
+        <colgroup>
+        <col style="width: 32%" />
+        <col style="width: 32%" />
+        <col style="width: 35%" />
+        </colgroup>
+        <thead>
+        <tr>
+        <th>Block Type</th>
+        <th>Mask (For masked SubSystem)</th>
+        <th>Characteristic Property</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Constant</td>
+        <td></td>
+        <td>Value</td>
+        </tr>
+        <tr>
+        <td>DataStoreMemory</td>
+        <td></td>
+        <td>DataStoreName</td>
+        </tr>
+        <tr>
+        <td>DataStoreRead</td>
+        <td></td>
+        <td>DataStoreName</td>
+        </tr>
+        <tr>
+        <td>DataStoreWrite</td>
+        <td></td>
+        <td>DataStoreName</td>
+        </tr>
+        <tr>
+        <td>DataTypeConversion</td>
+        <td></td>
+        <td>OutDataTypeStr</td>
+        </tr>
+        <tr>
+        <td>From</td>
+        <td></td>
+        <td>GotoTag</td>
+        </tr>
+        <tr>
+        <td>Gain</td>
+        <td></td>
+        <td>Gain</td>
+        </tr>
+        <tr>
+        <td>Goto</td>
+        <td></td>
+        <td>GotoTag</td>
+        </tr>
+        <tr>
+        <td>InitialCondition</td>
+        <td></td>
+        <td>Value</td>
+        </tr>
+        <tr>
+        <td>Interpolation_n-D</td>
+        <td></td>
+        <td>Table</td>
+        </tr>
+        <tr>
+        <td>Lookup_n-D</td>
+        <td></td>
+        <td>Table</td>
+        </tr>
+        <tr>
+        <td>LookupNDDirect</td>
+        <td></td>
+        <td>Table</td>
+        </tr>
+        <tr>
+        <td>ModelReference</td>
+        <td></td>
+        <td>ModelName</td>
+        </tr>
+        <tr>
+        <td>Prelookup</td>
+        <td></td>
+        <td>BreakpointsData</td>
+        </tr>
+        <tr>
+        <td>SubSystem</td>
+        <td>Compare To Constant</td>
+        <td>const</td>
+        </tr>
+        <tr>
+        <td>SubSystem</td>
+        <td>Enumerated Constant</td>
+        <td>enum</td>
+        </tr>
+        <tr>
+        <td>SubSystem</td>
+        <td></td>
+        <td>BlockParameters</td>
+        </tr>
+        <tr>
+        <td>Terminator</td>
+        <td></td>
+        <td></td>
+        </tr>
+        </tbody>
+        </table>
+        <p>If the selected block is not defined in this table, the
+        “characteristic value” is the “Name” of the block.</p>
+        <p>In future releases, the “characteristic value” will be
+        editable by the user. If you hope to add more block types in all
+        future releases, please contact the author.</p>
+        <figure>
+        <img src="img/info_copyValue.gif"
+        alt="Example: Copy characteristic value" />
+        <figcaption aria-hidden="true">Example: Copy characteristic
+        value</figcaption>
+        </figure>
+        <h2 id="track-signal">Signal Tracking</h2>
+        <p><img src="img/trackSigLeft.png" class="inline"
+        alt="Button: Track signal to next source" /> <img
+        src="img/trackSigRight.png" class="inline"
+        alt="Button: Track signal to next destination" /></p>
+        <p>These 2 buttons track a selected signal upstream or
+        downstream for one step.</p>
+        <p><img src="img/trackSigLeftest.png" class="inline"
+        alt="Button: Track signal to farest source" /> <img
+        src="img/trackSigRightest.png" class="inline"
+        alt="Button: Track signal to farest destination" /></p>
+        <p>These 2 buttons track a selected signal upstream or
+        downstream to the furthest point.</p>
+        <p>You can select a line or a block to track the signal. If the
+        block or the connected block of the selected line has one input
+        and one output, the signal tracking will continue to the next
+        block.</p>
+        <figure>
+        <img src="./img/info_trackSignal.gif"
+        alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h2 id="apply-style">Apply Pre-defined Style</h2>
+        <figure>
+        <img src="img/applyStyle.png"
+        alt="Button: Apply pre-defined style" />
+        <figcaption aria-hidden="true">Button: Apply pre-defined
+        style</figcaption>
+        </figure>
+        <p>This button applies pre-defined formats and other properties
+        to the selected blocks. You can define multiple style sets.</p>
+        <h3 id="style-definition">Style Definition</h3>
+        <p>Right-click the button and select “Open style file folder” to
+        access example style files. Each style set is defined by a
+        Simulink model file or a Simulink library file, with the file
+        name serving as the style name.</p>
+        <p>In the style file, there should be no more than one block for
+        each “type”. The “type” is defined as follows:</p>
+        <ul>
+        <li>For non-Subsystem blocks, the “type” is the block’s
+        “BlockType” property.</li>
+        <li>For masked Subsystem blocks, the “type” is the block’s
+        “Mask” property.</li>
+        </ul>
+        <h3 id="style-properties">Style Properties</h3>
+        <p>The following properties defined in the style file will be
+        applied to the selected blocks:</p>
+        <ul>
+        <li>BackgroundColor</li>
+        <li>ForegroundColor</li>
+        <li>FontName</li>
+        <li>FontSize</li>
+        <li>FontWeight</li>
+        <li>FontAngle</li>
+        <li>DropShadow</li>
+        <li>AttributesFormatString</li>
+        <li>HideName</li>
+        <li>HideAutomaticName (not available in older versions)</li>
+        </ul>
+        <p>The following properties are optional and can be configured
+        by right-clicking the button and selecting the desired
+        options:</p>
+        <ul>
+        <li>Block Size: If enabled, the block width and height will be
+        set according to the style file.</li>
+        <li>Callbacks: If enabled, all callbacks defined in the style
+        file will be applied to the selected blocks.</li>
+        </ul>
+        <h3 id="choosing-a-style">Choosing a Style</h3>
+        <p>You can choose a style by right-clicking the button and
+        selecting “Choose style”. In addition to the pre-defined styles,
+        you can also select “Simulink default” to restore the default
+        Simulink style. If “Simulink default” is chosen, the following
+        properties will not be applied:</p>
+        <ul>
+        <li>HideName</li>
+        <li>HideAutomaticName</li>
+        <li>Block Size</li>
+        </ul>
+        <figure>
+        <img src="./img/info_applyStyle.gif"
+        alt="Example: Apply style" />
+        <figcaption aria-hidden="true">Example: Apply style</figcaption>
+        </figure>
+    </main>
+</body>
+</html>

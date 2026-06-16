@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1 id="project-panel---simulation-in-unit-mode">Project Panel -
+        Simulation in Unit Mode</h1>
+        <p>Running a single MiL simulation can often take a long time,
+        especially for large models. This is usually due to the plant
+        model, particularly if SimScape is used. If parts of your model
+        are configured as unit models, with inputs logged from a full
+        MiL simulation, you can run a unit simulation to quickly access
+        signal values inside the unit models. SimDolphin can fully
+        automate this process once the unit models are configured,
+        allowing you to <strong>run one simulation to obtain all signal
+        values</strong> by running unit simulations automatically. A
+        unit simulation can often be ten times faster than a full MiL
+        simulation.</p>
+        <p>In <strong>Unit Mode</strong>, double-clicking a signal name
+        in the signal listbox adds it to the “Signals to check” listbox.
+        Clicking “View simulation data” will display the signal values
+        in a Simulation Data Inspector window. If the signals are not
+        yet logged, SimDolphin will run unit simulations automatically
+        before displaying the results.</p>
+        <h2 id="create-unit-models">Create Unit Models</h2>
+        <p>Currently, SimDolphin only supports unit models created from
+        Model Reference blocks. Support for library blocks will be added
+        in the future.</p>
+        <p>A typical MiL model looks like this:</p>
+        <figure>
+        <img src="img/mil_model.png" alt="MiL model" />
+        <figcaption aria-hidden="true">MiL model</figcaption>
+        </figure>
+        <p>This model contains five basic sub-models: INPUT_PROCESS,
+        Model_A, Model_B, Model_C, and OUTPUT_PROCESS. You can create
+        five unit models for them. To generate inputs for each unit
+        model, all input signals must be logged using To-Workspace
+        blocks. If a logged signal is a bus, a bus object must be
+        created for it.</p>
+        <figure>
+        <img src="img/mil_model_log.png" alt="MiL model" />
+        <figcaption aria-hidden="true">MiL model</figcaption>
+        </figure>
+        <p>The unit model for INPUT_PROCESS can be created as
+        follows:</p>
+        <figure>
+        <img src="img/input_process_unit.png"
+        alt="Unit model of INPUT_PROCESS" />
+        <figcaption aria-hidden="true">Unit model of
+        INPUT_PROCESS</figcaption>
+        </figure>
+        <p>From-Workspace blocks are used to provide inputs to the unit
+        model. If an input signal is a bus, the bus object must be
+        specified in the From-Workspace block.</p>
+        <p>From-Workspace blocks should be configured as follows:</p>
+        <figure>
+        <img src="img/from_workspace_config.png"
+        alt="From-Workspace block" />
+        <figcaption aria-hidden="true">From-Workspace block</figcaption>
+        </figure>
+        <ul>
+        <li>The output data type must be specified.</li>
+        <li>The sample time should be set to match the logged data.</li>
+        </ul>
+        <p>When creating unit models, the <a
+        href="https://www.mathworks.com/help/simulink/ug/controlling-and-displaying-the-sorted-order.html">execution
+        sequence</a> in the original MiL model must be considered. If an
+        input signal is executed after the current referenced model, a
+        unit delay block must be added to the From-Workspace block.</p>
+        <figure>
+        <img src="img/model_b_unit.png" alt="Unit model of Model_B" />
+        <figcaption aria-hidden="true">Unit model of
+        Model_B</figcaption>
+        </figure>
+        <h2 id="scan-unit-models">Scan Unit Models</h2>
+        <figure>
+        <img src="img/btnUnit.png" alt="Scan unit models button" />
+        <figcaption aria-hidden="true">Scan unit models
+        button</figcaption>
+        </figure>
+        <p>All unit models must be saved in a single folder. Click the
+        unit button to select the folder containing all unit models.
+        SimDolphin will scan all unit models and save the information in
+        the project data. After scanning, SimDolphin will automatically
+        switch to <strong>Unit Mode</strong>. In this mode, you can view
+        the value of any signal by running unit simulations
+        automatically.</p>
+    </main>
+</body>
+</html>

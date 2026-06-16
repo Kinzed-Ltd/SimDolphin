@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1 id="tool-panel---signal-routing-blocks">Tool Panel - Signal
+        Routing Blocks</h1>
+        <p>The functions in this section are related to inports,
+        outports, and in/out blocks.</p>
+        <h2 id="add-in-out-blocks">Add In/Out Blocks to Empty Ports</h2>
+        <figure>
+        <img src="img/ioAdd.png" alt="add in/out blocks" />
+        <figcaption aria-hidden="true">add in/out blocks</figcaption>
+        </figure>
+        <p>This function adds input and output blocks to the empty ports
+        of the selected blocks. The block format will match the style
+        defined in “<a href="info-format.html#apply-style">Apply
+        Style</a>”.</p>
+        <figure>
+        <img src="img/genBlk_ioAdd.gif"
+        alt="example: add in/out blocks" />
+        <figcaption aria-hidden="true">example: add in/out
+        blocks</figcaption>
+        </figure>
+        <h2 id="align-in-out-blocks">Align In / Out blocks</h2>
+        <p>This function aligns the selected In/Out blocks to match the
+        position of the ports they are connected to.</p>
+        <figure>
+        <img src="img/ioAlign.gif" alt="example: align in/out blocks" />
+        <figcaption aria-hidden="true">example: align in/out
+        blocks</figcaption>
+        </figure>
+        <h2 id="re-number-alpha">Re-number In/Out blocks by
+        alphabet</h2>
+        <figure>
+        <img src="img/reOrder.png" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <p>This function renumbers the selected In/Out blocks in
+        alphabetical order of their signal names.</p>
+        <figure>
+        <img src="img/reOrder.gif" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h2 id="add-port-ends">Add Ground/Terminator to Empty Ports</h2>
+        <figure>
+        <img src="img/prtEndAdd.png" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <p>This function adds a connected Ground block to any empty
+        inport of the selected blocks, or a Terminator block to any
+        empty outport of the selected blocks.</p>
+        <h2 id="create">Add Goto/From to Empty Ports</h2>
+        <figure>
+        <img src="img/gfCreate.png" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <p>This function adds a connected Goto block to any empty inport
+        of the selected blocks, or a From block to any empty outport.
+        The tag name of the Goto/From block is set to the signal name of
+        the port. The block format follows the style selected in the “<a
+        href="info-format.html#apply-style">Apply Style</a>”
+        function.</p>
+        <figure>
+        <img src="img/gotoFrom_add.gif" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <h2 id="add-match">Add Matching From/Goto Blocks</h2>
+        <figure>
+        <img src="img/gfAddMatch.png" alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+        <p>For any selected From or Goto block, this function adds a
+        matching Goto or From block to the model. The new block will use
+        the same format as the selected block and will be placed next to
+        it.</p>
+        <figure>
+        <img src="img/gotoFrom_addMatch.gif"
+        alt="SimDolphin Screenshot" />
+        <figcaption aria-hidden="true">SimDolphin
+        Screenshot</figcaption>
+        </figure>
+    </main>
+</body>
+</html>
