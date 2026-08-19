@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!-- Table of contents for the SimDolphin documentation.
+     Consumed by the MATLAB Help browser via info.xml (written by genToolbox),
+     which points <help_location> at this folder. The first tocitem is the
+     landing page - that is what "Open Documentation" opens.
+     Keep in sync with the .md/.html pages in this folder (see /update-doc).
+     html_template.html is the pandoc template, not a doc page - do not list it. -->
+<toc version="2.0">
+<tocitem target="simdolphin-intro.html">SimDolphin
+   <tocitem target="tool-panel.html" image="HelpIcon.USER_GUIDE">Tool Panel
+      <tocitem target="signal-renaming.html">Signal Renaming</tocitem>
+      <tocitem target="signal-routing-blocks.html">Signal Routing Blocks</tocitem>
+      <tocitem target="bus-and-data-dictionaries.html">Bus and Data Dictionaries</tocitem>
+      <tocitem target="general-block-manipulations.html">General Block Manipulations</tocitem>
+      <tocitem target="line-manipulations.html">Line Manipulations</tocitem>
+      <tocitem target="info-format.html">Info Format</tocitem>
+   </tocitem>
+   <tocitem target="project-panel.html" image="HelpIcon.USER_GUIDE">Project Panel
+      <tocitem target="scan-and-load.html">Scan and Load</tocitem>
+      <tocitem target="normal-mode.html">Normal Mode</tocitem>
+      <tocitem target="unit-mode.html">Unit Mode</tocitem>
+      <tocitem target="signals-and-parameters.html">Signals and Parameters</tocitem>
+   </tocitem>
+</tocitem>
+</toc>

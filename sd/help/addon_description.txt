@@ -1,0 +1,13 @@
+Simulink add-on for faster model building, project navigation and Model-in-the-Loop testing.
+
+SimDolphin is a Simulink add-on that accelerates model-based development. Build models more quickly, navigate complex Simulink projects with ease, and streamline Model-in-the-Loop (MiL) testing.
+
+Tools Panel - a comprehensive set of utilities for Simulink modelling: signal renaming and routing, Goto/From tag handling, bus and data dictionary management, block and line manipulation, and style application. Hover a button for a description, or right-click for options and help.
+
+Project Panel - scan a Simulink model and store its data locally for quick access to every signal and parameter. Run simulations and inspect signal values directly. Once unit models are configured, a single simulation run makes all signal data available through fully automated unit model simulations.
+
+The SD-TOOLS Simulink toolstrip tab is registered at install time. The GUI can be launched from the APPS gallery, from that tab, or by typing sd at the command line.
+
+Requires MATLAB R2022a or later. The demo version is free; an internet connection is required at launch to check the current time. SimDolphin does not collect user data.
+
+Kinzed Ltd - hello@kinzed.com

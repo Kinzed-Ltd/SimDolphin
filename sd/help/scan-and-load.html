@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1 id="project-panel---scan-and-load-a-model">Project Panel -
+        Scan and Load a Model</h1>
+        <figure>
+        <img src="img/btnModel.png" alt="Model button" />
+        <figcaption aria-hidden="true">Model button</figcaption>
+        </figure>
+        <h2 id="how-it-works">How it works</h2>
+        <p>Always use the current top model (bdroot) as the
+        <strong>target model</strong>. Make sure you are in the model
+        you want to work with before clicking this button.</p>
+        <p>This panel can be used to scan a Simulink model, typically a
+        model-in-the-loop (MiL) model. The scanned data is stored
+        locally, allowing quick access to all signals and parameters
+        within the model.</p>
+        <h2 id="menu-items">Menu items</h2>
+        <p>Click this button to open a popup menu. The options shown
+        depend on the current state of the target model:</p>
+        <ul>
+        <li>If the model has <strong>never been scanned</strong>, you
+        will see <strong>Scan</strong>.</li>
+        <li>If the model has been scanned but is <strong>not currently
+        loaded</strong>, you will see <strong>Load</strong> and
+        <strong>Re-scan</strong>.</li>
+        <li>If the model is <strong>already loaded</strong>, you will
+        see <strong>Update</strong> and <strong>Re-scan</strong>.</li>
+        </ul>
+        <h2 id="actions">Actions</h2>
+        <h3 id="scan-re-scan">Scan / Re-scan</h3>
+        <p><strong>Scan</strong> and <strong>Re-scan</strong> do the
+        same thing: perform a full scan of the current model (bdroot),
+        including all referenced models. All scanned data is saved
+        locally and the model information is loaded into the GUI.</p>
+        <p>The first scan may take a few minutes depending on the size
+        of the model. Use <strong>Re-scan</strong> to discard previously
+        saved data and start fresh.</p>
+        <h3 id="load-update">Load / Update</h3>
+        <p><strong>Load</strong> and <strong>Update</strong> do the same
+        thing: check whether any model files have changed since the last
+        scan. Only changed files are re-scanned. The saved data is then
+        updated and the model information is loaded into the GUI.</p>
+        <p>This is faster than a full scan and is the normal way to
+        refresh data after editing a model.</p>
+    </main>
+</body>
+</html>

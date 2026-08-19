@@ -1,0 +1,150 @@
+SimDolphin End User Licence Agreement
+=====================================
+
+Copyright (c) 2023-2026 Kinzed Ltd. All rights reserved.
+
+This is a licence agreement between you ("You") and Kinzed Ltd ("Kinzed")
+for the SimDolphin software, including the packaged add-on installer, the
+compiled MATLAB P-code files, and the accompanying documentation
+(together, the "Software").
+
+By installing or using the Software, You accept this Licence. If You do not
+accept it, do not install or use the Software.
+
+The Software is NOT open source. The source code is not published, and no
+rights in the source code are granted by this Licence.
+
+
+1. LICENCE GRANT
+----------------
+
+Kinzed grants You a free of charge, non-exclusive, worldwide, revocable
+licence to install and use the Software, including for commercial purposes
+and for work carried out for payment, subject to the terms below.
+
+No fee is payable for the beta release covered by this Licence.
+
+
+2. REDISTRIBUTION
+-----------------
+
+You may copy and redistribute the Software free of charge, provided that:
+
+  (a) it is redistributed in its complete and unmodified form;
+  (b) this Licence file is included with every copy; and
+  (c) no charge of any kind is made for the Software itself.
+
+You may not sell the Software, bundle it into a product or service that is
+sold, or present it as Your own work.
+
+
+3. RESTRICTIONS
+---------------
+
+You may not:
+
+  (a) reverse engineer, decompile, disassemble, deobfuscate, or otherwise
+      attempt to derive the source code of the Software, except to the
+      extent this restriction is prohibited by applicable law;
+  (b) modify, adapt, translate, or create derivative works of the Software;
+  (c) remove, obscure, or alter any copyright, trademark, or other
+      proprietary notice;
+  (d) circumvent, disable, or interfere with any licensing, date, or
+      verification mechanism in the Software.
+
+
+4. BETA SOFTWARE, DATE VERIFICATION AND AVAILABILITY
+----------------------------------------------------
+
+The Software is pre-release BETA software. It has not been through the
+testing applied to a final release and may contain defects.
+
+The Software requires an internet connection at launch in order to verify
+the current date, and it may cease to operate after a given date. Kinzed may
+modify, suspend, withdraw, or discontinue the Software, or any release of
+it, at any time and without notice. Kinzed is under no obligation to provide
+updates, maintenance, or technical support.
+
+Kinzed does not collect user data through the Software.
+
+
+5. NO WARRANTY
+--------------
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND
+NON-INFRINGEMENT.
+
+THE SOFTWARE IS NOT CERTIFIED FOR USE IN SAFETY-CRITICAL SYSTEMS. YOU ARE
+SOLELY RESPONSIBLE FOR VERIFYING ANY MODEL, SIGNAL, PARAMETER, OR SIMULATION
+RESULT THAT THE SOFTWARE PRODUCES OR MODIFIES, AND FOR MAINTAINING BACKUPS
+OF YOUR WORK.
+
+
+6. LIMITATION OF LIABILITY
+--------------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL KINZED
+BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN CONTRACT,
+TORT, OR OTHERWISE, ARISING FROM OR IN CONNECTION WITH THE SOFTWARE OR ITS
+USE, INCLUDING WITHOUT LIMITATION ANY LOSS OF DATA, LOSS OF PROFIT, LOSS OF
+MODELS OR WORK PRODUCT, OR BUSINESS INTERRUPTION.
+
+Nothing in this Licence excludes or limits liability for death or personal
+injury caused by negligence, for fraud or fraudulent misrepresentation, or
+for any other liability that cannot lawfully be excluded or limited.
+
+
+7. GENERAL
+----------
+
+MATLAB and Simulink are registered trademarks of The MathWorks, Inc.
+SimDolphin is not affiliated with, endorsed by, or sponsored by The
+MathWorks, Inc. You are responsible for holding valid licences for the
+MathWorks products required to run the Software.
+
+This Licence is governed by the laws of England and Wales, and the courts of
+England and Wales have exclusive jurisdiction over any dispute arising from
+it.
+
+For licensing enquiries, support for MATLAB releases before R2022a, or
+customisation services, contact hello@kinzed.com.
+
+
+THIRD-PARTY COMPONENTS
+======================
+
+The Software includes the following third-party component, used under its
+own licence. The notice below is reproduced as required by that licence and
+applies only to that component, not to the Software as a whole.
+
+--------------------------------------------------------------------------
+INI Config
+Copyright (c) 2009-2010 Evgeny Prilepin aka Iroln <esp.home@gmail.com>
+
+Distributed via MATLAB Central File Exchange under the BSD 2-Clause Licence:
+https://www.mathworks.com/matlabcentral/fileexchange/24992-ini-config
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+--------------------------------------------------------------------------
