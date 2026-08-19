@@ -11,9 +11,9 @@ Its buttons are organized into functional groups covering block layout, signal r
 
 ## Sections
 
-- **[General Block Manipulations](general-block-manipulations.html)** — align, show/hide names, adjust height, and add/remove I/O ports on selected blocks.
-- **[Signal Routing Blocks](signal-routing-blocks.html)** — generate and manage Inport/Outport and Goto/From blocks.
-- **[Line Manipulations](line-manipulations.html)** — set signal names, propagation, and stream properties on lines.
-- **[Information & Block Format](info-format.html)** — track signals, copy values, and apply pre-defined block styles.
-- **[Signal Renaming](signal-renaming.html)** — propagate and synchronise signal names across the model.
-- **[Bus & Data Dictionaries](bus-and-data-dictionaries.html)** — additional utilities including bus object creation.
+- **[General Block Manipulations](general-block-manipulations.md)** — align, show/hide names, adjust height, and add/remove I/O ports on selected blocks.
+- **[Signal Routing Blocks](signal-routing-blocks.md)** — generate and manage Inport/Outport and Goto/From blocks.
+- **[Line Manipulations](line-manipulations.md)** — set signal names, propagation, and stream properties on lines.
+- **[Information & Block Format](info-format.md)** — track signals, copy values, and apply pre-defined block styles.
+- **[Signal Renaming](signal-renaming.md)** — propagate and synchronise signal names across the model.
+- **[Bus & Data Dictionaries](bus-and-data-dictionaries.md)** — additional utilities including bus object creation.

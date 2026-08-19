@@ -6,7 +6,7 @@ The functions in this section are related to inports, outports, and in/out block
 
 ![add in/out blocks](img/ioAdd.png)
 
-This function adds input and output blocks to the empty ports of the selected blocks. The block format will match the style defined in "[Apply Style](info-format.html#apply-style)".
+This function adds input and output blocks to the empty ports of the selected blocks. The block format will match the style defined in "[Apply Style](info-format.md#apply-style)".
 
 ![example: add in/out blocks](img/genBlk_ioAdd.gif)
 
@@ -34,7 +34,7 @@ This function adds a connected Ground block to any empty inport of the selected 
 
 ![SimDolphin Screenshot](img/gfCreate.png)
 
-This function adds a connected Goto block to any empty inport of the selected blocks, or a From block to any empty outport. The tag name of the Goto/From block is set to the signal name of the port. The block format follows the style selected in the "[Apply Style](info-format.html#apply-style)" function.
+This function adds a connected Goto block to any empty inport of the selected blocks, or a From block to any empty outport. The tag name of the Goto/From block is set to the signal name of the port. The block format follows the style selected in the "[Apply Style](info-format.md#apply-style)" function.
 
 ![SimDolphin Screenshot](img/gotoFrom_add.gif)
 

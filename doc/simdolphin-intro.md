@@ -25,11 +25,11 @@ This button toggles the "always on top" feature.
 
 ## Tools Panel
 
-This panel provides a comprehensive set of utilities to boost Simulink modeling efficiency. Hover over a button to see a quick description, or right-click to access additional options and help. For more details, see the **[Tool Panel](tool-panel.html)** section.
+This panel provides a comprehensive set of utilities to boost Simulink modeling efficiency. Hover over a button to see a quick description, or right-click to access additional options and help. For more details, see the **[Tool Panel](tool-panel.md)** section.
 
 ## Project Panel 
 
-In this panel, you can scan a Simulink model, typically a model-in-the-loop (MiL) model. The scanned data is stored locally, allowing quick access to all signals and parameters within the model. You can also run simulations and check signal values more conveniently. Once unit models are configured, a single simulation provides access to all signal data through fully automated unit model simulations (**one simulation run, all signal data available**), making analysis and debugging significantly faster. For more details, see the **[Project Panel](project-panel.html)** section.
+In this panel, you can scan a Simulink model, typically a model-in-the-loop (MiL) model. The scanned data is stored locally, allowing quick access to all signals and parameters within the model. You can also run simulations and check signal values more conveniently. Once unit models are configured, a single simulation provides access to all signal data through fully automated unit model simulations (**one simulation run, all signal data available**), making analysis and debugging significantly faster. For more details, see the **[Project Panel](project-panel.md)** section.
 
 ## License and Supported MATlAB Versions
 

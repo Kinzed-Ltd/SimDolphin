@@ -84,10 +84,8 @@ If you would like this feature in your project, get in touch at
 The full documentation ships with the add-on: open **Help > Supplemental
 Software** in MATLAB, or right-click any button for the relevant page.
 
-The same pages live in [`doc/`](doc/) as Markdown, starting with
-[**Introduction**](doc/simdolphin-intro.md). These are the source files for the
-in-product help, so the cross-references between them point at the built HTML
-and will not resolve on GitHub — the text and images read fine.
+The same pages live in [`doc/`](doc/), starting with
+[**Introduction**](doc/simdolphin-intro.md). 
 
 ---
 
